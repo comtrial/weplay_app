@@ -25,7 +25,10 @@ class _MyAppState extends State<MyApp> {
             //스크롤로 탭 간 전환 방지
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
-              Container()
+              Container(),
+              Container(),
+              Container(),
+              Container(),
             ],
           ),
           bottomNavigationBar: Bottom(),
