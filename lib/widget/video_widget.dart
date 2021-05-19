@@ -55,7 +55,7 @@ class VideoWidget extends StatelessWidget {
                       "하위하윙",
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.white.withOpacity(0.8),
+                        color: Colors.black.withOpacity(0.8),
                       ),
                     ),
                     Text(" . "),
@@ -63,7 +63,7 @@ class VideoWidget extends StatelessWidget {
                       "조회수",
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.white.withOpacity(0.8),
+                        color: Colors.black.withOpacity(0.8),
                       ),
                     ),
                     Text(" . "),
@@ -71,7 +71,7 @@ class VideoWidget extends StatelessWidget {
                       "2021-02-05",
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.white.withOpacity(0.8),
+                        color: Colors.black.withOpacity(0.8),
                       ),
                     ),
                   ],

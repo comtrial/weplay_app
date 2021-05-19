@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weplay_app/binding/init_binding.dart';
 import 'package:weplay_app/screen/home_screen.dart';
+import 'package:weplay_app/model/constant.dart';
+import 'package:weplay_app/screen/search_screen.dart';
 import 'package:weplay_app/widget/bottom_bar.dart';
 import 'package:weplay_app/widget/youtube_detail.dart';
 
@@ -20,11 +22,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         title: 'Weplay',
-        theme: ThemeData(
-          brightness: Brightness.dark,
-          primaryColor: Colors.white,
-          accentColor: Colors.white,
-        ),
+        debugShowCheckedModeBanner: false,
         initialBinding: InitBinding(),
         initialRoute: "/",
         getPages: [
@@ -33,12 +31,13 @@ class _MyAppState extends State<MyApp> {
         home: DefaultTabController(
           length: 4,
           child: Scaffold(
+            backgroundColor: mainBackground,
             body: TabBarView(
               //스크롤로 탭 간 전환 방지
               physics: NeverScrollableScrollPhysics(),
               children: <Widget>[
                 HomeScreen(),
-                Container(),
+                SearchScreen(),
                 Container(),
                 Container()
               ],
