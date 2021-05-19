@@ -36,7 +36,9 @@ class _SearchScreenState extends State<SearchScreen> {
     // double width = screenSize.width;
     // double height = screenSize.height;
     return Container(
+
       padding: EdgeInsets.fromLTRB(5, 44, 5, 10),
+
       child: Column(
         children: [
           Row(
@@ -113,7 +115,6 @@ class _SearchScreenState extends State<SearchScreen> {
           SearchedVideo(),
           SearchedVideo(),
           SearchedVideo(),
-          SearchedVideo(),
         ],
       ),
     );
@@ -142,6 +143,7 @@ class _SearchedVideoState extends State<SearchedVideo> {
           child: Row(
             children: [
               Container(
+
                 padding: EdgeInsets.all(6),
                 width: 150,
                 child: Image.network(
@@ -156,6 +158,7 @@ class _SearchedVideoState extends State<SearchedVideo> {
                   children: [
                     Container(
                       width: 170,
+
                       child: Text(
                         '이건 제목입다이니다이건 제목입다이니다이건 제목입다이니dssdssddsdsd다',
                         maxLines: 3,
@@ -172,6 +175,7 @@ class _SearchedVideoState extends State<SearchedVideo> {
                     ),
                     Container(
                       width: 160,
+
                       height: 20,
                       child: Text(
                         '박지환의 브이로그 조회수: 40억회 8년전',
