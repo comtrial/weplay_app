@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weplay_app/model/constant.dart';
+import 'package:weplay_app/model/model_video.dart';
 import 'dart:io';
 
 class SearchScreen extends StatefulWidget {
@@ -8,6 +9,15 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  List<Video> videos = [
+    Video.fromMap({
+      'title': "동영상 제목",
+      'channel_title': '채널명',
+      'views': '24만회',
+      'date': '2020-04-20'
+    })
+  ];
+
   final TextEditingController _filter = TextEditingController();
   FocusNode focusNode = FocusNode();
   String _searchText = "";
@@ -26,7 +36,9 @@ class _SearchScreenState extends State<SearchScreen> {
     // double width = screenSize.width;
     // double height = screenSize.height;
     return Container(
-      padding: EdgeInsets.fromLTRB(5, 20, 5, 10),
+
+      padding: EdgeInsets.fromLTRB(5, 44, 5, 10),
+
       child: Column(
         children: [
           Row(
@@ -99,6 +111,10 @@ class _SearchScreenState extends State<SearchScreen> {
             ],
           ),
           SearchedVideo(),
+          SearchedVideo(),
+          SearchedVideo(),
+          SearchedVideo(),
+          SearchedVideo(),
         ],
       ),
     );
@@ -127,20 +143,22 @@ class _SearchedVideoState extends State<SearchedVideo> {
           child: Row(
             children: [
               Container(
-                padding: EdgeInsets.all(2),
-                width: 170,
+
+                padding: EdgeInsets.all(6),
+                width: 150,
                 child: Image.network(
                   'https://i.ytimg.com/vi/T_J8tbROUik/default.jpg',
                   fit: BoxFit.fill,
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(7),
+                padding: EdgeInsets.all(6),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      width: 150,
+                      width: 170,
+
                       child: Text(
                         '이건 제목입다이니다이건 제목입다이니다이건 제목입다이니dssdssddsdsd다',
                         maxLines: 3,
@@ -156,7 +174,8 @@ class _SearchedVideoState extends State<SearchedVideo> {
                       ),
                     ),
                     Container(
-                      width: 150,
+                      width: 160,
+
                       height: 20,
                       child: Text(
                         '박지환의 브이로그 조회수: 40억회 8년전',
