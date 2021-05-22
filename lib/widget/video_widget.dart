@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:weplay_app/model/constant.dart';
 
 class VideoWidget extends StatelessWidget {
   const VideoWidget({Key key}) : super(key: key);
 
+
   Widget _thumbnail() {
     return Container(
       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-      height: 250,
+      height: 180,
+      width: 330,
       decoration: BoxDecoration(
         image: DecorationImage(
             image: Image.network(
@@ -20,7 +23,7 @@ class VideoWidget extends StatelessWidget {
   Widget _simpleDetailinfo() {
     return Container(
       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-      padding: const EdgeInsets.only(left: 10, bottom: 15),
+      padding: const EdgeInsets.only(left: 10, bottom: 10),
       child: Row(
         children: [
           CircleAvatar(
@@ -38,7 +41,7 @@ class VideoWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Text("짱구짱구짱구짱구짱구", maxLines: 2),
+                      child: Text("짱구짱구짱구짱구짱구", maxLines: 2, style: kTitleStyle,),
                     ),
                     IconButton(
                         alignment: Alignment.topCenter,
@@ -87,8 +90,24 @@ class VideoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.2),
+        spreadRadius: 1,
+        blurRadius: 1,
+        offset: Offset(0, 2), // changes position of shadow
+      ),
+        ]
+      ),
+      
+      margin: EdgeInsets.fromLTRB(12, 0, 12, 10),
+      
       child: Column(
         children: [
+          SizedBox(height:14),
           _thumbnail(),
           _simpleDetailinfo(),
         ],
