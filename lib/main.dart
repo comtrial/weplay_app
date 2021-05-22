@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weplay_app/binding/init_binding.dart';
@@ -7,12 +8,15 @@ import 'package:weplay_app/screen/search_screen.dart';
 import 'package:weplay_app/widget/bottom_bar.dart';
 import 'package:weplay_app/widget/youtube_detail.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
+  
 }
 
 class _MyAppState extends State<MyApp> {

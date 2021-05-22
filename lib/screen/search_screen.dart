@@ -1,6 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:weplay_app/model/constant.dart';
 import 'package:weplay_app/model/model_video.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:io';
 
 class SearchScreen extends StatefulWidget {
@@ -9,6 +11,12 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  Stream<QuerySnapshot> streamData;
+  void initState() {
+    super.initState();
+    streamData = firestore.collection('video_data').snapshots();
+  }
   List<Video> videos = [
     Video.fromMap({
       'title': "동영상 제목",
@@ -37,7 +45,7 @@ class _SearchScreenState extends State<SearchScreen> {
     // double height = screenSize.height;
     return Container(
 
-      padding: EdgeInsets.fromLTRB(5, 44, 5, 10),
+      padding: EdgeInsets.fromLTRB(5, 44, 5, 12),
 
       child: Column(
         children: [
@@ -48,7 +56,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   Icons.arrow_back_ios_outlined,
                 ),
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {print(videos);},
               ),
               Container(
                 width: 320,

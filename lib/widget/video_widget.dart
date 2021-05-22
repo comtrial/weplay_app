@@ -103,6 +103,7 @@ import 'package:weplay_app/model/constant.dart';
 class VideoWidget extends StatelessWidget {
   const VideoWidget({Key key}) : super(key: key);
 
+
   Widget _thumbnail() {
     return Container(
       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -195,11 +196,21 @@ class VideoWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.2),
+        spreadRadius: 1,
+        blurRadius: 1,
+        offset: Offset(0, 2), // changes position of shadow
       ),
+        ]
+      ),
+      
       margin: EdgeInsets.fromLTRB(12, 0, 12, 10),
+      
       child: Column(
         children: [
-          SizedBox(height: 14),
+          SizedBox(height:14),
           _thumbnail(),
           _simpleDetailinfo(),
         ],
