@@ -37,7 +37,7 @@ class _SearchScreenState extends State<SearchScreen> {
     // double height = screenSize.height;
     return Container(
 
-      padding: EdgeInsets.fromLTRB(5, 44, 5, 10),
+      padding: EdgeInsets.fromLTRB(5, 44, 5, 12),
 
       child: Column(
         children: [

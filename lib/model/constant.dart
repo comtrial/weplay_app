@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 // Colors
 const mainWhite = Color(0xFFFFFFFF);
 const mainBackground =  Color(0xFFF1EFE5);
-const mainFontDark = Color(0xFFF1EFE5);
+const mainFontDark = Colors.black87;
 const subGray = Color(0xFFFAFAFB);
 const downDark = Color(0x66000000);
 const lineGray = Color(0x1A000000);
@@ -23,7 +23,7 @@ var kAppBarTitleStyle = TextStyle(
 var kTitleStyle = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.bold,
-  color: mainFontDark,
+  color: Colors.black87,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
