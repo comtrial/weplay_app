@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cloud_firestore: ^2.2.0
+  firebase_core: ^1.2.0
 
 
 
@@ -20,7 +22,7 @@ dependencies:
   flutter_svg: ^0.19.1
   intl: ^0.16.1
   youtube_player_flutter: ^6.1.0+7
-  shared_preferences: ^0.5.12+4
+  #shared_preferences: ^0.5.12+4
   cached_network_image: ^2.5.0
 
 dev_dependencies:
